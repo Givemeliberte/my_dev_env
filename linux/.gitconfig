@@ -1,0 +1,16 @@
+# .gitconfig is stored in the home (~) directory and created when the first git init is run
+# this file does not need to be sourced
+
+# Will happen during setup if not added to file
+[user]
+        email = laliberte.aaron@gmail.com
+        name = givemeliberte
+
+# Changes default branch from master to main.
+[init]
+        defaultBranch = main 
+        
+# Automoatically prunes when a fetch is done. 
+# Prune removes local branches that have been removed from the remote repository
+[fetch] 
+        prune = true
