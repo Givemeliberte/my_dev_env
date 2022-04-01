@@ -7,8 +7,29 @@
         name = givemeliberte
 
 # Changes default branch from master to main.
+# Tried this but didn't seem to work, maybe a source issue?
+# Anyway, instead can pull from template
+#instructions below
 [init]
         defaultBranch = main 
+
+# Change default branch to main via template
+nvim ~/.gitconfig
+[init] # only add if doesn't already exist
+        templateDir = ~/.config/git/template/ #<<--sets template directory
+esq :wq! # save file
+# from CLI 
+mkdir ~/.config/git/template
+
+#from CLI
+nvim ~/.config/git/template/HEAD
+i #for insert
+ref: refs/head/main
+# be sure to incude a blank line here
+
+#save file
+
+
         
 # Automoatically prunes when a fetch is done. 
 # Prune removes local branches that have been removed from the remote repository
