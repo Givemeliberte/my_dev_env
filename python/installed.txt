@@ -1,0 +1,16 @@
+install pip (pyton package manager, makes it easier to run virtual environments and python packages)
+    command: sudo apt install python3-pip
+install pipenv - enables virtual environments and package management
+    pip documentation: https://pip.pypa.io/en/stable/
+    # if you run into errors running adding packages with pipenv may need to uninstall virtualenv per https://stackoverflow.com/questions/63491221/modulenotfounderror-no-module-named-virtualenv-seed-embed-via-app-data-when-i/65845074#65845074?newreg=fa90609f48df4ba1893d0587fa8ade00
+    #bash command 
+        pip install --user pipenv
+    # --user intalls for user instead of global which is recommended in pipenv documentation
+    # upgrade pip command in bash
+        sudo pip install --upgrade pip
+    # add user path to PATH 
+        nvim ~/.bash_profile
+        # opens bash profile file in nvim
+        # insert:
+        export PATH="{path_from_error]:$PATH"
+
